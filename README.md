@@ -1,8 +1,3 @@
-Web dibuat dengan laravel 8
-  - login register forgot password memakai laravel jetstream
-  - dashboard memakai template sb admin 2
-
-
 
 ## Installation
 1. Clone this project or download this project
