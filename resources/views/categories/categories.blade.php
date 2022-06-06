@@ -50,10 +50,10 @@
             <tr>
               <td><img src="{{ asset('img_categories/' . $category->gambar)  }}" alt="" width="300px"></td>
               <td>{{ $category->nama }}</td>
-              <td>{{ $category->harga }}</td>
+              <td>Rp. {{ number_format($category->harga) }}</td>
               <td>
-                <a href="/categories/edit/{{ $category->id }}">Edit</a>
-                <a href="/categories/hapus/{{ $category->id }}">Hapus</a>
+                <a href="/categories/edit/{{ $category->id_categories }}">Edit</a>
+                <a href="/categories/hapus/{{ $category->id_categories }}">Hapus</a>
               </td>
             </tr>
             @endforeach

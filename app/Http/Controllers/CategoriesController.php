@@ -41,13 +41,13 @@ class CategoriesController extends Controller
         return redirect('/categories');
     }
 
-    public function edit($id)
+    public function edit($id_categories)
     {
-        $category = Categories::find($id);
+        $category = Categories::find($id_categories);
         return view('categories.categories-edit', compact('category'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_categories)
     {
         $this->validate($request, [
             'nama' => 'required',
@@ -55,7 +55,7 @@ class CategoriesController extends Controller
             'gambar' => 'file|mimes:png,jpg,jpeg|max:2048',
         ]);
 
-        $category = Categories::find($id);
+        $category = Categories::find($id_categories);
 
         if($request->hasFile('gambar')){
 
@@ -75,15 +75,15 @@ class CategoriesController extends Controller
         return redirect('/categories');
     }
 
-    public function delete($id)
+    public function delete($id_categories)
     {
-        $category = Categories::find($id);
+        $category = Categories::find($id_categories);
         return view('categories.categories-hapus', compact('category'));
     }
 
-    public function destroy($id)
+    public function destroy($id_categories)
     {
-        $category = Categories::find($id);
+        $category = Categories::find($id_categories);
         File::delete('img_categories/'.$category->gambar);
         $category->delete();
         return redirect('/categories');

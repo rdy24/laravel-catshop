@@ -25,7 +25,7 @@ Route::post('/categories/store', [CategoriesController::class, 'store']);
 Route::get('/categories/edit/{id}', [CategoriesController::class, 'edit']);
 Route::put('/categories/update/{id}', [CategoriesController::class, 'update']);
 Route::get('/categories/hapus/{id}', [CategoriesController::class, 'delete']);
-Route::delete('/categories/destroy/{id}', [CategoriesController::class, 'destroy']);
+Route::get('/categories/destroy/{id}', [CategoriesController::class, 'destroy']);
 
 
 

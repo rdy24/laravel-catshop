@@ -30,7 +30,8 @@
       <div class="content">
         <h3>Edit Categories</h3>
         <div class="form-login">
-          <form action="{{ url('/categories/update/' . $category->id) }}" method="post" enctype="multipart/form-data">
+          <form action="{{ url('/categories/update/' . $category->id_categories) }}" method="post"
+            enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <label for="categories">Categories</label>

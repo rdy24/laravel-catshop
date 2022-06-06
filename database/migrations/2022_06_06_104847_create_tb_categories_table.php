@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tb_categories', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_categories');
             $table->string('nama', 50);
             $table->string('harga', 50);
-            $table->string('gambar', 50);
+            $table->string('gambar', 100);
         });
     }
 

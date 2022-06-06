@@ -10,6 +10,8 @@ class Categories extends Model
     use HasFactory;
 
     protected $table = 'tb_categories';
+    protected $primaryKey = 'id_categories';
+    public $incrementing = true;
     protected $fillable = ['nama', 'harga', 'gambar'];
     public $timestamps = false;
 }
