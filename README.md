@@ -3,8 +3,7 @@
 1. Clone this project or download this project
 2. Run composer install in terminal
    ```bash
-    copy .env.example .env
-    php artisan key:generate
+    composer install
     ```
 3. Set up Laravel configurations
     ```bash
