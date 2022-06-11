@@ -32,10 +32,6 @@
         <h3>Hapus Transaction</h3>
         <div class="form-login">
           <h4>Ingin Menghapus Data ?</h4>
-          <form action="{{ url('/transaction/destroy/' . $transaction->id_transaction ) }}" method="post">
-            @csrf
-            @method('DELETE')
-          </form>
           <button type="submit" class="btn btn-simpan" name="hapus" style="width: 40%; margin: 20px auto;">
             <a href={{ url('/transaction/destroy/' . $transaction->id_transaction ) }}>
               Yes
