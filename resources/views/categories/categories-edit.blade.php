@@ -16,15 +16,15 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <a href="../admin.php">Home</a>
-      <a href="categories.php">Categories</a>
-      <a href="../transaction/transaction.php">Transaction</a>
+      <a href="/">Home</a>
+      <a href="/categories">Categories</a>
+      <a href="/transaction">Transaction</a>
     </div>
     <div class="right_content">
       <div class="navbar">
-        <img src="../assets/logo.png" alt="" />
+        <img src="{{ asset('assets/logo.png') }}" alt="" />
         <button class="btn">
-          <a href="../logout.php">Logout</a>
+          <a href="">Logout</a>
         </button>
       </div>
       <div class="content">
@@ -33,7 +33,7 @@
           <form action="{{ url('/categories/update/' . $category->id_categories) }}" method="post"
             enctype="multipart/form-data">
             @csrf
-            @method('PUT')
+            @method('put')
             <label for="categories">Categories</label>
             <input class="input" type="text" name="nama" id="categories" placeholder="Categories"
               value="{{ $category->nama }}" />
