@@ -32,10 +32,6 @@
         <h3>Hapus Categories</h3>
         <div class="form-login">
           <h4>Ingin Menghapus Data ?</h4>
-          <form action="{{ url('/categories/destroy/' . $category->id_categories ) }}" method="post">
-            @csrf
-            @method('DELETE')
-          </form>
           <button type="submit" class="btn btn-simpan" name="hapus" style="width: 40%; margin: 20px auto;">
             <a href={{ url('/categories/destroy/' . $category->id_categories ) }}>
               Yes
