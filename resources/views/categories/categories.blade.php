@@ -16,16 +16,16 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <a href="../admin.php">Home</a>
-      <a href="categories.php">Categories</a>
-      <a href="../transaction/transaction.php">Transaction</a>
+      <a href="/">Home</a>
+      <a href="/categories">Categories</a>
+      <a href="/transaction">Transaction</a>
     </div>
 
     <div class="right_content">
       <div class="navbar">
-        <img src="../assets/logo.png" alt="" />
+        <img src="{{ asset('assets/logo.png') }}" alt="" />
         <button class="btn">
-          <a href="../logout.php">Logout</a>
+          <a href="">Logout</a>
         </button>
       </div>
       <div class="content">
@@ -34,7 +34,7 @@
           <a href="/categories/tambah">Tambah Data</a>
         </button>
         <button type="button" class="btn">
-          <a href="categories-cetak.php">Cetak</a>
+          <a href="">Cetak</a>
         </button>
         <table class="table-data">
           <thead>

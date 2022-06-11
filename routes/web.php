@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,22 +28,11 @@ Route::put('/categories/update/{id}', [CategoriesController::class, 'update']);
 Route::get('/categories/hapus/{id}', [CategoriesController::class, 'delete']);
 Route::get('/categories/destroy/{id}', [CategoriesController::class, 'destroy']);
 
-
-
-
 // Route Transaction
-Route::get('/transaction', function(){
-    return view('transaction.transaction');
-});
-
-Route::get('/transaction/tambah', function() {
-    return view('transaction.transaction-entry');
-});
-
-Route::get('/transaction/edit', function() {
-    return view('transaction.transaction-edit');
-});
-
-Route::get('/transaction/hapus', function() {
-    return view('transaction.transaction-hapus');
-});
+Route::get('/transaction', [TransactionController::class, 'index']);
+Route::get('/transaction/tambah', [TransactionController::class, 'create']);
+Route::post('/transaction/store', [TransactionController::class, 'store']);
+Route::get('/transaction/edit/{id}', [TransactionController::class, 'edit']);
+Route::put('/transaction/update/{id}', [TransactionController::class, 'update']);
+Route::get('/transaction/hapus/{id}', [TransactionController::class, 'delete']);
+Route::get('/transaction/destroy/{id}', [TransactionController::class, 'destroy']);
